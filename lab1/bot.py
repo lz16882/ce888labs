@@ -9,7 +9,7 @@ emo = EmotionDetector()
 @module.rule('')
 def hi(bot, trigger):
     global ave
-    a = 1
+    a = 0.1
     ave = ave + a * (emo.detect_emotion_in_raw_np(str(trigger)) - ave)
     print(trigger, trigger.nick)
     #bot.say('Hi, '  + trigger.nick)
