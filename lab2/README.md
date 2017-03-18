@@ -9,10 +9,9 @@
 * There is no need to change the code of plotting scatterplots because it talks about the relationship between current fleets and proposed fleets.
 * Build two strings to describe the data of current fleets and new fleets repectively.(We need drop some extra data in current data which are corresponding to the blank part of new data)
 * Possess the two strings according to  the original codes and plot the histograms as instruction says.
- 
- `![scaterplot](./scaterplot.png?raw=true)`
- `![histogram] (./histogram.png?raw=true)`
- `![histogram_new] (./histogram_new.png?raw=true)`
+![scaterplot](./scaterplot.png?raw=true)
+![histogram] (./histogram.png?raw=true)
+![histogram_new] (./histogram_new.png?raw=true)
 
 
 ## Standard deviation comparison via the boostrap
