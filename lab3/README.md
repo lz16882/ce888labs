@@ -3,9 +3,9 @@
 
 In the Ipython notebook I created
 
-*Load the data from `bank-additional-full.csv`
-*Use the classifier ExtraTreesClassifier` with 100 estimators on the data with outcome/output variable "y"
-*Convert to dummies using `df_dummies = pd.get_dummies(df)`
+* Load the data from `bank-additional-full.csv`
+* Use the classifier ExtraTreesClassifier with 100 estimators on the data with outcome/output variable "y"
+* Convert to dummies using `df_dummies = pd.get_dummies(df)`
 * Use`del df_copy["y_no"]` and `del df_copy["duration"]` delete columns "y_no" and "duration"
 * Plot histogram of the label `y_yes` as followed
 ![snsfig](./snsfig.png?raw=true)
