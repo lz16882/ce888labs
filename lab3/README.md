@@ -12,7 +12,7 @@ In the Ipython notebook I created
 * Use outcome `y_yes` Get the values and run a classifier based on outcome `y_yes`. The Dummy ACC value is 0.90.	
 * Report the results of 10-Kfold stratified cross-validation
 * Get sample importances as followed and a confusion matrix
-![importances](./importances.png?raw=true)
+
 
 
 
