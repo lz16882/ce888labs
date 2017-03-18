@@ -1,28 +1,29 @@
 # Lab8
 
-## Setting up 
-* Do the following from the unix prompt of your VM
-	* Go to the directory you "cloned" the module files last time
-	* Do `git pull origin master' to bring the new files
-
-* Do the following tasks using your windows share or your unix account in the VM	
-	* Copy the lab files from the module directory into your own github lab directory, in "lab8" folder
-	* Remove everything from the copied README.md
-
-
-
-For this lab, we will train a network to do sentiment analysis on IMDB data sets - actual data from here [http://ai.stanford.edu/~amaas/data/sentiment/](http://ai.stanford.edu/~amaas/data/sentiment/)
 
 ## Lab Exercises 
 
-- [ ] run ``python imdb.py`` and note somewhere the test accuracy score
-- [ ] Modify the code to add one more layer of 64 ``relu`` units after the embedding layer record the score (i.e. add a dense followed by an "activation" layer)
+- [ ] Run ``python imdb.py`` and note somewhere the test accuracy score
+      Because running the whole data is too time-consuming, I only record the first result in each question.
+	  The result is:
+	  *`loss: 0.4868 - acc: 0.7582 - val_loss: 0.3525 - val_acc: 0.8431`
+- [ ] Modify the code to add one more layer of 64 ``relu`` units after the embedding layer record the score
+	  The result is :
+	  *`loss: 0.5073 - acc: 0.7446 - val_loss: 0.3567 - val_acc: 0.8430`
 - [ ] Modify the code and add a dropout layer after the relu layer
+	  The result is :
+      *`loss: 0.5202 - acc: 0.7357 - val_loss: 0.3613 - val_acc: 0.8436`	
 - [ ] Remove the layers you have added previously Convolution layer followed by a relu non-linearity and global max pooling (see lecture notes)
+	  *`x = Convolution1D(64, 3, border_mode='same')(x)`
+	  *`x = Activation('relu')(x)`
+      *`x = GlobalMaxPooling1D()(x)`
+	  The result is :
+	  *`loss: 0.4968 - acc: 0.7518 - val_loss: 0.3864 - val_acc: 0.8315`	  
 - [ ] Modify the code and add an LSTM layer in place of the convolution layer
-- [ ] (Optional - and quite advanced) use both an LSTM layer and a Convolution layer and merge the results with a Merge layer
-- [ ] Once you are done, save your changes in github
-	* Go inside your lab directory and do 
-      * ``git add -A -v``
-      * ``git commit -m <message>``
-      * ``git push origin master``
+	  *`x = LSTM(128, dropout_W=0.2, dropout_U=0.2)(x)`
+	  The result is :
+	  *`loss: 0.5350 -acc: 0.7240 - val_loss: 0.4201 - val_acc: 0.8172`
+- [ ] Use both an LSTM layer and a Convolution layer and merge the results with a Merge layer
+	  *`z = merge([x,y], mode = 'concat')`
+	  The result is :
+	  *`loss: 0.4788 - acc: 0.7660 - val_loss: 0.3899 - val_acc: 0.8303`
