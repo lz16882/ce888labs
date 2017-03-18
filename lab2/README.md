@@ -7,9 +7,9 @@
 * Possess the two strings according to  the original codes and plot the histograms as instruction says.
 
 ![scaterplot](./scaterplot.png?raw=true)
-*
+* 
 ![histogram] (./histogram.png?raw=true)
-*
+* 
 ![histogram_new] (./histogram_new.png?raw=true)
 
 
