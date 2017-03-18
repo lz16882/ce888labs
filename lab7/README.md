@@ -26,7 +26,7 @@ For this lab, we will train a neural network to learn how to perform classificat
 - [ ] Modify the code so that you are able to add as many layers of ``relu`` units as you want, controlled by a variable called ``n_hidden_layers``
 - [ ] Add a Dropout layer with strength of 0.5
 - [ ] (Optional) play around with different scores and optimise on the number of layers, trying to find the optimal hyperparameters
-    ``for i in range(0, n_hidden_layers): ``
-     `` x = Dense(128)(x)``
-    ``  x = PReLU()(x)``
-    ``  x = Dropout(0.5)(x)``
+   * ``for i in range(0, n_hidden_layers): ``
+   *  `` x = Dense(128)(x)``
+   * ``  x = PReLU()(x)``
+   * ``  x = Dropout(0.5)(x)``
