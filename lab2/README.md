@@ -1,14 +1,11 @@
 # Lab2
 
-## Setting up 
-* Type `git pull origin master'  in VM to bring the new files from the module sources in "clone" directory.
-* Copy the lab files from the module directory into my github lab directory, in "lab2" folder.
-
 ## Histogram and Scaterplot
 * Modify salaries.py: Change the excel source from customer.csv into vehicles.csv. 
 * There is no need to change the code of plotting scatterplots because it talks about the relationship between current fleets and proposed fleets.
 * Build two strings to describe the data of current fleets and new fleets repectively.(We need drop some extra data in current data which are corresponding to the blank part of new data)
 * Possess the two strings according to  the original codes and plot the histograms as instruction says.
+
 ![scaterplot](./scaterplot.png?raw=true)
 ![histogram] (./histogram.png?raw=true)
 ![histogram_new] (./histogram_new.png?raw=true)
