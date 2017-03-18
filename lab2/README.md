@@ -12,7 +12,7 @@
  
 ![scaterplot](./scaterplot.png?raw=true)
 ![histogram] (./histogram.png?raw=true)
-![histogram] (./histogram_new.png?raw=true)
+![histogram_new] (./histogram_new.png?raw=true)
 
 
 ## Standard deviation comparison via the boostrap
