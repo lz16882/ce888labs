@@ -38,12 +38,14 @@ Y_test = np_utils.to_categorical(y_test, nb_classes)
 
 inputs = Input(shape=(784,))
 n_hidden_layers = 3 
-x = Dense(128)(inputs)
+x = Dense(64)(inputs)
 x = PReLU()(x)
-for i in range(0, n_hidden_layers): 
-    x = Dense(128)(x)
-    x = PReLU()(x)
-    x = Dropout(0.5)(x)
+# x = Dense(64)(x)
+# x = PReLU()(x)
+# for i in range(0, n_hidden_layers): 
+     # x = Dense(64)(x)
+     # x = PReLU()(x)
+     # x = Dropout(0.5)(x)
 
 predictions = Dense(nb_classes, activation='softmax')(x)
     

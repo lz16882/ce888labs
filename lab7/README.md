@@ -1,28 +1,28 @@
-# Lab6
-
-## Setting up 
-* Do the following from the unix prompt of your VM
-	* Go to the directory you "cloned" the module files last time
-	* Do `git pull origin master' to bring the new files
-
-* Do the following tasks using your windows share or your unix account in the VM	
-	* Copy the lab files from the module directory into your own github lab directory, in "lab7" folder
-	* Remove everything from the copied README.md
+# Lab7
 
 
-## Lab setup
-
-Type the following in the command prompt (connect remotely via ``ssh mlvm@mlvm``)
-
-* ``pip install --upgrade tensorflow``
-* ``pip install --upgrade keras`` 
-
-For this lab, we will train a neural network to learn how to perform classification of images from mnist - see here [https://www.kaggle.com/c/digit-recognizer/leaderboard](https://www.kaggle.com/c/digit-recognizer/leaderboard)
-
-## Lab Exercises 
-
-- [ ] run ``python mnist.py`` and note somewhere the test accuracy score
+- [ ] run ``python mnist.py`` and note somewhere the test accuracy score, and the result is below:
+    *`Test score: [0.097207916113499229, 0.97389999999999999]`
+    *`Test accuracy: [0.097207916113499229, 0.97389999999999999]`
 - [ ] Modify the code to add one more layer of 64 ``relu`` units and record the score
+    *`x = Dense(64)(x)`
+    *`x = PReLU()(x)`
+	The result is:
+	*`Test score: [0.1326725911730493, 0.97040000000000004]`
+    *`Test accuracy: [0.1326725911730493, 0.97040000000000004]`
+	
 - [ ] Modify the code so that you are able to add as many layers of ``relu`` units as you want, controlled by a variable called ``n_hidden_layers``
+	*`for i in range(0, n_hidden_layers):` 
+    *`x = Dense(64)(x)`
+    *`x = PReLU()(x)`
+	The result is:
+	*`Test score: [0.11941951049849449, 0.9738]`
+    *`Test accuracy: [0.11941951049849449, 0.9738]`
 - [ ] Add a Dropout layer with strength of 0.5
-- [ ] (Optional) play around with different scores and optimise on the number of layers, trying to find the optimal hyperparameters
+	`x = Dropout(0.5)(x)`
+	The result is:
+	*`Test score: [0.14512907791214999, 0.97189999999999999]`
+    *`Test accuracy: [0.14512907791214999, 0.97189999999999999]`
+- [ ] Play around with different scores and optimise on the number of layers, it is found that the optimal hyperparameters are when the `n_hidden_layers = 3` and `Dense = 128`, the result is below:
+	*`Test score: [0.094442345715908732, 0.98009999999999997]`
+	*`Test accuracy: [0.094442345715908732, 0.98009999999999997]`
