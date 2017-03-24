@@ -14,6 +14,6 @@ In the Ipython notebook I created
 * Get sample importances as followed and a confusion matrix
 ![importances](./importances.png?raw=true)
 
-
+![confusion_new](./importances.png?raw=true)
 
 
