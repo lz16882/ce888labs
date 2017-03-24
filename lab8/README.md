@@ -12,7 +12,7 @@
 	* `loss: 0.5073 - acc: 0.7446 - val_loss: 0.3567 - val_acc: 0.8430`
 - [ ] Modify the code and add a dropout layer after the relu layer
 - The result is :
-        * `loss: 0.5202 - acc: 0.7357 - val_loss: 0.3613 - val_acc: 0.8436`	
+     * `loss: 0.5202 - acc: 0.7357 - val_loss: 0.3613 - val_acc: 0.8436`	
 - [ ] Remove the layers you have added previously Convolution layer followed by a relu non-linearity and global max pooling (see lecture notes)
      * `x = Convolution1D(64, 3, border_mode='same')(x)`
      * `x = Activation('relu')(x)`
